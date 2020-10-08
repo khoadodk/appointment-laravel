@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::resource('doctor', 'DoctorController');
 
 Auth::routes();
 
