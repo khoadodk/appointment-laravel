@@ -34,7 +34,7 @@
 
 
                     <div class="nav-item has-sub">
-                        <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Doctor</span> <span
+                        <a href="javascript:void(0)"><i class="ik ik-file-text"></i><span>Doctor</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
                             <a href="{{ route('doctor.create') }}" class="menu-item">Create</a>
@@ -45,7 +45,7 @@
 
 
                     <div class="nav-item has-sub">
-                        <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Appointment Time</span> <span
+                        <a href="javascript:void(0)"><i class="ik ik-list"></i><span>Appointment Time</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
                             <a class="menu-item">Create</a>
@@ -57,7 +57,7 @@
 
 
                     <div class="nav-item has-sub">
-                        <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Patients</span> <span
+                        <a href="javascript:void(0)"><i class="ik ik-heart"></i><span>Patients</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
                             <a class="menu-item">Patients(today)</a>
@@ -72,7 +72,7 @@
 
 
                     <div class="nav-item has-sub">
-                        <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Patient Appointment</span> <span
+                        <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Patient Appointment</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
                             <a class="menu-item">Today Appointment</a>
