@@ -141,8 +141,15 @@
                                         class="ik ik-mail dropdown-icon"></i> Inbox</a>
                                 <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i>
                                     Message</a>
-                                <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i>
-                                    Logout</a>
+
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    <i class="ik ik-power dropdown-icon"></i>{{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </div>
                         </div>
 
