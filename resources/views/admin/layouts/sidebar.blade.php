@@ -48,8 +48,8 @@
                         <a href="javascript:void(0)"><i class="ik ik-list"></i><span>Appointment Time</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
-                            <a class="menu-item">Create</a>
-                            <a class="menu-item">Check</a>
+                            <a href="{{ route('appointment.create') }}" class="menu-item">Create</a>
+                            <a href="{{ route('appointment.index') }}" class="menu-item">Check</a>
 
                         </div>
                     </div>
@@ -63,7 +63,6 @@
                             <a class="menu-item">Patients(today)</a>
                             <a class="menu-item">All
                                 patients(prescription)</a>
-
                         </div>
                     </div>
 

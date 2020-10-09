@@ -20,12 +20,17 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 // Admin Routes
 Route::group(['middleware' => ['auth', 'admin',]], function () {
     Route::resource('doctor', 'DoctorController');
 });
-
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Doctor Routes
+Route::group(['middleware' => ['auth', 'doctor',]], function () {
+    Route::resource('appointment', 'AppointmentController');
+    Route::post('/appointment/check', 'AppointmentController@check')->name('appointment.check');
+    Route::post('/appointment/update', 'AppointmentController@updateTime')->name('update');
+});
