@@ -130,7 +130,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#datepicker").datetimepicker({
-            format: 'MMM-DD-YYYY'
+            format: 'MM-DD-YYYY'
         })
     })
 
