@@ -2,19 +2,21 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-md-6"><img src="/banners/homeBanner.jpg" alt="home" class="img-fluid"></div>
             <div class="col-md-6">
-                <h2>Book your appointment</h2>
+                <h1>Book your appointment today!</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.</p>
-                <div class="mt-5">
-                    <a href="{{ url('/register') }}"> <button class="btn btn-primary">Register as Patient</button></a>
-                    <a href="{{ url('/login') }}"><button class="btn btn-success">Login</button></a>
-                </div>
+                @guest
+                    <div class="mt-5">
+                        <a href="{{ url('/register') }}"> <button class="btn btn-primary">Register as Patient</button></a>
+                        <a href="{{ url('/login') }}"><button class="btn btn-success">Login</button></a>
+                    </div>
+                @endguest
             </div>
         </div>
 
@@ -40,7 +42,7 @@
         {{-- Display doctors --}}
         <div class="card">
             <div class="card-body">
-                <div class="card-header">List of Doctors Available for @isset($formatDate) {{ $formatDate }}
+                <div class="card-header">List of Doctors Available: @isset($formatDate) {{ $formatDate }}
                     @endisset
                 </div>
                 <div class="card-body">
@@ -62,10 +64,14 @@
                                             width="100px"></td>
                                     <td>{{ $doctor->doctor->name }}</td>
                                     <td>{{ $doctor->doctor->department }}</td>
-                                    <td>
-                                        <a href="{{ route('create.appointment', [$doctor->user_id, $doctor->date]) }}"><button
-                                                class="btn btn-primary">Appointment</button></a>
-                                    </td>
+                                    @if (Auth::check() && auth()->user()->role->name == 'patient')
+                                        <td>
+                                            <a href="{{ route('create.appointment', [$doctor->user_id, $doctor->date]) }}"><button
+                                                    class="btn btn-primary">Appointment</button></a>
+                                        </td>
+                                    @else
+                                        <td>For patients ONLY</td>
+                                    @endif
                                 </tr>
                             @empty
                                 <td>No doctors available</td>

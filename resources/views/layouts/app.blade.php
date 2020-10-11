@@ -43,7 +43,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @if (auth()->user()->role->name === 'patient')
+                        @if (auth()->check() && auth()->user()->role->name === 'patient')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('my.booking') }}">{{ __('My Booking') }}</a>
                             </li>
@@ -65,9 +65,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                                                         document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                        {{ __('Profile') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

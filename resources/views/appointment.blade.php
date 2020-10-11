@@ -54,6 +54,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card-footer">
                         @if (Auth::check())
                             <button type="submit" class="btn btn-primary">Book Appointment</button>
@@ -63,6 +64,7 @@
                             <a class="btn btn-primary" href="/login">Login</a>
                         @endif
                     </div>
+
                 </form>
 
             </div>
