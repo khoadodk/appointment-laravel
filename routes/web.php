@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home Page Routes
 Route::get('/', 'FrontEndController@index');
-
 Route::get('/new-appointment/{doctorId}/{date}', 'FrontEndController@show')->name('create.appointment');
+Route::post('/book/appointment', "FrontEndController@store")->name('book.appointment')->middleware('auth');
+Route::get('/my-booking', 'FrontEndController@myBookings')->name('my.booking')->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+Route::get('/dashboard', 'DashBoardController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

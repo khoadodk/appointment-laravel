@@ -27,29 +27,29 @@
                     </div>
                 @endif
 
-                @if (Session::has('errmessage'))
+                @if (Session::has('errMessage'))
                     <div class="alert alert-danger">
-                        {{ Session::get('errmessage') }}
+                        {{ Session::get('errMessage') }}
                     </div>
                 @endif
 
-                <form action="" method="post">@csrf
+                <form action="{{ route('book.appointment') }}" method="post">@csrf
                     <div class="card">
                         <div class="card-header lead">Appointment Date: {{ $date }}</div>
                         <div class="card-body">
                             <div class="row">
                                 @foreach ($times as $time)
                                     <div class="col-md-3">
-                                        <label class="btn btn-outline-primary">
+                                        <label class="btn btn-outline-primary btn-block">
                                             <input type="radio" name="time" value="{{ $time->time }}">
-                                            <span>{{ $time->time }}
-                                            </span>
+                                            <span>{{ $time->time }}</span>
                                         </label>
                                     </div>
-                                    {{-- <input type="hidden" name="doctorId"
-                                        value="{{ $doctor_id }}">
+                                    {{-- pass props to book app
+                                    --}}
+                                    <input type="hidden" name="doctorId" value="{{ $doctor_id }}">
                                     <input type="hidden" name="appointmentId" value="{{ $time->appointment_id }}">
-                                    <input type="hidden" name="date" value="{{ $date }}"> --}}
+                                    <input type="hidden" name="date" value="{{ $date }}">
                                 @endforeach
                             </div>
                         </div>
@@ -59,8 +59,8 @@
                             <button type="submit" class="btn btn-primary">Book Appointment</button>
                         @else
                             <p>Please login to make an appointment</p>
-                            <a href="/register">Register</a>
-                            <a href="/login">Login</a>
+                            <a class="btn btn-success" href="/register">Register</a>
+                            <a class="btn btn-primary" href="/login">Login</a>
                         @endif
                     </div>
                 </form>
