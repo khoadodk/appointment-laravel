@@ -74,8 +74,8 @@
                         <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Patient Appointment</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
-                            <a class="menu-item">Today Appointment</a>
-                            <a class="menu-item">All Time Appointment</a>
+                            <a href="{{ route('patients') }}" class="menu-item">Today Appointment</a>
+                            <a href="{{ route('all.appointments') }}" class="menu-item">All Time Appointment</a>
 
                         </div>
                     </div>

@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // redirect to dashboard if user is admin
+        // redirect to dashboard if user is admin or doctor
         if (Auth::user()->role->name == 'admin' || Auth::user()->role->name == 'doctor') {
             return redirect()->to('/dashboard');
         };

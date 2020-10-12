@@ -22,7 +22,7 @@
                             <tbody>
                                 @forelse($appointments as $key=>$appointment)
                                     <tr>
-                                        <th scope="row">{{ $key + 1 }}</th>
+                                        <td>{{ $key + 1 }}</td>
                                         <td>{{ $appointment->doctor->name }}</td>
                                         <td>{{ $appointment->time }}</td>
                                         <td>{{ $appointment->date }}</td>

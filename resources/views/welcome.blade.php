@@ -57,9 +57,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($doctors as $doctor)
+                            @forelse ($doctors as $key=>$doctor)
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <td>{{ $key + 1 }}</td>
                                     <td><img src="{{ asset('images') }}/{{ $doctor->doctor->image }}" alt="doctor photo"
                                             width="100px"></td>
                                     <td>{{ $doctor->doctor->name }}</td>

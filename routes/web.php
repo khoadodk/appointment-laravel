@@ -8,7 +8,7 @@ Route::get('/new-appointment/{doctorId}/{date}', 'FrontEndController@show')->nam
 
 Route::get('/dashboard', 'DashBoardController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 // Profile Routes
 Route::get('/user-profile', 'ProfileController@index')->name('profile');
@@ -23,11 +23,14 @@ Route::group(['middleware' => ['auth', 'patient']], function () {
     Route::get('/my-booking', 'FrontendController@myBookings')->name('my.booking');
 });
 // Admin Routes
-Route::group(['middleware' => ['auth', 'admin',]], function () {
+Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::resource('doctor', 'DoctorController');
+    Route::get('/patients', 'PatientListController@index')->name('patients');
+    Route::get('/status/update/{id}', 'PatientListController@toggleStatus')->name('update.status');
+    Route::get('/all-patients', 'PatientListController@allTimeAppointment')->name('all.appointments');
 });
 // Doctor Routes
-Route::group(['middleware' => ['auth', 'doctor',]], function () {
+Route::group(['middleware' => ['auth', 'doctor']], function () {
     Route::resource('appointment', 'AppointmentController');
     Route::post('/appointment/check', 'AppointmentController@check')->name('appointment.check');
     Route::post('/appointment/update', 'AppointmentController@updateTime')->name('update');

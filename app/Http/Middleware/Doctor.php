@@ -16,7 +16,7 @@ class Doctor
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->role->name == 'doctor') {
+        if (Auth::user()->role->name == 'doctor' || Auth::user()->role->name == 'admin') {
             return $next($request);
         } else {
             abort(401);
