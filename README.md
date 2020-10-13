@@ -1,6 +1,6 @@
 # Doctor appointment web app built with Laravel
 
-![Home Page](https://github.com/khoadodk/appointment-laravel/blob/develop/homepage.PNG)
+![Home Page](https://github.com/khoadodk/appointment-laravel/blob/master/homepage.PNG)
 
 ### Functionality Overview
 
