@@ -64,6 +64,7 @@
                                                         class="btn btn-success">Checked-In</button></a>
                                             @endif
                                         </td>
+
                                     </tr>
                                 @empty
                                     <td>There is no appointment!</td>

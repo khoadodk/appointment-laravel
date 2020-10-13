@@ -47,7 +47,7 @@
                             <div class="col-lg-6">
                                 <label for="">Full name</label>
                                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                                    placeholder="doctor name" value="{{ $user->name }}">
+                                    value="{{ $user->name }}">
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -57,7 +57,7 @@
                             <div class="col-lg-6">
                                 <label for="">Email</label>
                                 <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                                    placeholder="email" value="{{ $user->email }}">
+                                    value="{{ $user->email }}">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -70,8 +70,7 @@
                             <div class="col-lg-6">
                                 <label for="">Password</label>
                                 <input type="password" name="password"
-                                    class="form-control @error('password') is-invalid @enderror"
-                                    placeholder="doctor password">
+                                    class="form-control @error('password') is-invalid @enderror">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -99,7 +98,7 @@
                                 <label for="">Education</label>
                                 <input type="text" name="education"
                                     class="form-control @error('education') is-invalid @enderror"
-                                    placeholder="doctor highest degree" value="{{ $user->education }}">
+                                    placeholder="Doctor's Highest Degree" value="{{ $user->education }}">
                                 @error('education')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -109,7 +108,7 @@
                             <div class="col-lg-6">
                                 <label for="">Address</label>
                                 <input type="text" name="address"
-                                    class="form-control @error('address') is-invalid @enderror" placeholder="doctor address"
+                                    class="form-control @error('address') is-invalid @enderror"
                                     value="{{ $user->address }}">
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">

@@ -11,7 +11,7 @@
                 @endif
                 <div class="card">
                     <div class="card-header">
-                        Total Appointments: {{ $bookings->count() }}
+                        Total Patients: {{ $bookings->count() }}
                     </div>
                     <div class="card-body table-responsive-lg">
                         <table class="table table-striped">
@@ -61,7 +61,7 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <td>There is no appointment!</td>
+                                    <td>There is no patient!</td>
                                 @endforelse
 
                             </tbody>

@@ -38,62 +38,62 @@
                 </div>
             @endif
             <div class="card">
-            </div>
-            <div class="card-body table-responsive-md">
-                <table id="data_table" class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th class="nosort">Avatar</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            <th>Phone number</th>
-                            <th>Department</th>
-                            <th class="nosort">&nbsp;</th>
-                            <th class="nosort">&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (count($users) > 0)
-                            @foreach ($users as $user)
-                                <tr>
-                                    <td>{{ $user->name }}</td>
-                                    <td><img src="{{ asset('images') }}/{{ $user->image }}" class="table-user-thumb" alt="">
-                                    </td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->address }}</td>
-                                    <td>{{ $user->phone_number }}</td>
-                                    <td>{{ $user->department }}</td>
-                                    <td>
-                                        <div class="table-actions">
-                                            <a href="#" data-toggle="modal" data-target="#exampleModal{{ $user->id }}">
-                                                <i class="btn btn-primary ik ik-eye"></i>
-                                            </a>
-                                            <a href="{{ route('doctor.edit', [$user->id]) }}"><i
-                                                    class="btn btn-warning ik ik-edit-2"></i></a>
+                <div class="card-body ">
+                    <table id="data_table" class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th class="nosort">Avatar</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Phone number</th>
+                                <th>Department</th>
+                                <th class="nosort">&nbsp;</th>
+                                <th class="nosort">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (count($users) > 0)
+                                @foreach ($users as $user)
+                                    <tr>
+                                        <td>{{ $user->name }}</td>
+                                        <td><img src="{{ asset('images') }}/{{ $user->image }}" class="table-user-thumb"
+                                                alt="">
+                                        </td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->address }}</td>
+                                        <td>{{ $user->phone_number }}</td>
+                                        <td>{{ $user->department }}</td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal{{ $user->id }}">
+                                                    <i class="btn btn-primary ik ik-eye"></i>
+                                                </a>
+                                                <a href="{{ route('doctor.edit', [$user->id]) }}"><i
+                                                        class="btn btn-warning ik ik-edit-2"></i></a>
 
-                                            <a href="{{ route('doctor.show', [$user->id]) }}">
-                                                <i class="btn btn-danger ik ik-trash-2"></i>
-                                            </a>
+                                                <a href="{{ route('doctor.show', [$user->id]) }}">
+                                                    <i class="btn btn-danger ik ik-trash-2"></i>
+                                                </a>
 
-                                        </div>
-                                    </td>
+                                            </div>
+                                        </td>
+                                        <td></td>
 
+                                    </tr>
 
-                                </tr>
+                                    <!-- View Modal -->
+                                    @include('admin.doctor.modal')
+                                @endforeach
 
-                                <!-- View Modal -->
-                                @include('admin.doctor.modal')
-                            @endforeach
+                            @else
+                                <td>No user to display</td>
+                            @endif
 
-                        @else
-                            <td>No user to display</td>
-                        @endif
-
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection

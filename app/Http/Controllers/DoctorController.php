@@ -14,7 +14,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $users  = User::get();
+        // Get the doctor info
+        $users  = User::get()->where('role_id', 1);
         return view('admin.doctor.index', compact('users'));
     }
 

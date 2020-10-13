@@ -1,9 +1,11 @@
-# Doctor appointment web app
+# Doctor appointment web app built with Laravel
 
-### To-do list
+![Home Page](https://github.com/khoadodk/appointment-laravel/blob/develop/homepage.PNG)
+
+### Functionality Overview
 
 -   Admin, doctor, patients authentication,
--   Admin can add doctors to system.
+-   Admin can add doctors, departments to system.
 -   Doctor can make appointment time slot.
 -   Patients can book an appointment with doctor.
 -   Search doctors.

@@ -32,10 +32,10 @@
 
 
                     <div class="nav-item has-sub">
-                        <a href="javascript:void(0)"><i class="ik ik-heart"></i><span>Patients</span> <span
+                        <a href="javascript:void(0)"><i class="ik ik-heart"></i><span>Prescription</span> <span
                                 class="badge badge-danger"></span></a>
                         <div class="submenu-content">
-                            <a href="{{ route('patient.today') }}" class="menu-item">Patients (today)</a>
+                            <a href="{{ route('patient.today') }}" class="menu-item">Today</a>
                             <a href="{{ route('all.prescriptions') }}" class="menu-item">All
                                 Prescribed Patients</a>
                         </div>
@@ -46,8 +46,8 @@
                             <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Department</span> <span
                                     class="badge badge-danger"></span></a>
                             <div class="submenu-content">
-                                <a class="menu-item">Create</a>
-                                <a class="menu-item">View</a>
+                                <a href="{{ route('department.create') }}" class="menu-item">Create</a>
+                                <a href="{{ route('department.index') }}" class="menu-item">View</a>
 
                             </div>
                         </div>
