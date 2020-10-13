@@ -57,7 +57,7 @@
                 <div class="card">
                     <div class="card-header">
                         Choose AM Time
-                        <span style="margin-left: 700px">Check/Uncheck
+                        <span class="ml-auto">Check/Uncheck
                             <input type="checkbox"
                                 onclick=" for(c in document.getElementsByName('time[]')) document.getElementsByName('time[]').item(c).checked=this.checked">
                         </span>

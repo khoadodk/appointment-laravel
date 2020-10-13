@@ -45,7 +45,10 @@
                         <!-- Authentication Links -->
                         @if (auth()->check() && auth()->user()->role->name === 'patient')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('my.booking') }}">{{ __('My Booking') }}</a>
+                                <a class="nav-link" href="{{ route('my.booking') }}">{{ __('Appointments') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('my.prescription') }}">{{ __('Prescriptions') }}</a>
                             </li>
                         @endif
                         @guest
@@ -69,7 +72,7 @@
                                         {{ __('Profile') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
+                                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

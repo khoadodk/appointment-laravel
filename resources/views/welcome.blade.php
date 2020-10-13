@@ -27,10 +27,10 @@
                     <div class="card-header">Find Doctors</div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-8">
                                 <input type="date" name='date' id="datepicker" class='form-control'>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-4">
                                 <button class="btn btn-primary" type="submit">Go</button>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                 <div class="card-header">List of Doctors Available: @isset($formatDate) {{ $formatDate }}
                     @endisset
                 </div>
-                <div class="card-body">
+                <div class="card-body table-responsive-sm">
                     <table class="table table-striped">
                         <thead>
                             <tr>

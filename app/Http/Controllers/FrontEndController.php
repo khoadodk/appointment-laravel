@@ -7,6 +7,7 @@ use App\Appointment;
 use App\Time;
 use App\User;
 use App\Booking;
+use App\Prescription;
 use App\Mail\AppointmentMail;
 
 class FrontEndController extends Controller
@@ -88,5 +89,11 @@ class FrontEndController extends Controller
     {
         $appointments = Booking::latest()->where('user_id', auth()->user()->id)->get();
         return view('booking.index', compact('appointments'));
+    }
+
+    public function myPrescription()
+    {
+        $prescriptions = Prescription::where('user_id', auth()->user()->id)->get();
+        return view('my-prescription', compact('prescriptions'));
     }
 }

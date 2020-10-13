@@ -61,7 +61,7 @@
                                                         class="btn btn-warning">Pending</button></a>
                                             @else
                                                 <a href="{{ route('update.status', [$booking->id]) }}"><button
-                                                        class="btn btn-success">Confirmed</button></a>
+                                                        class="btn btn-success">Checked-In</button></a>
                                             @endif
                                         </td>
                                     </tr>
