@@ -39,7 +39,7 @@
             @endif
             <div class="card">
             </div>
-            <div class="card-body">
+            <div class="card-body table-responsive-md">
                 <table id="data_table" class="table">
                     <thead>
                         <tr>

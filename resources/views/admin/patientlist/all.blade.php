@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         Total Appointments: {{ $bookings->count() }}
@@ -13,12 +13,12 @@
                         <div class="card-header">
                             Filter by Date: &nbsp;
                             <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-md-10 col-sm-6">
                                     <input type="text" class="form-control datetimepicker-input" id="datepicker"
                                         data-toggle="datetimepicker" data-target="#datepicker" name="date"
                                         placeholder=@isset($date) {{ $date }} @endisset>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-sm-6">
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                         </div>
                     </form>
 
-                    <div class="card-body">
+                    <div class="card-body table-responsive-lg">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
