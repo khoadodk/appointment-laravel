@@ -2,9 +2,8 @@
 
 @section('content')
     <div class="container">
-        <div class="row mb-4">
-            <div class="col-md-6"><img src="/banners/homeBanner.jpg" alt="home" class="img-fluid"></div>
-            <div class="col-md-6">
+        <div class="row mb-4 justify-content-center">
+            <div class="col-md-8">
                 <h1>Book your appointment today!</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

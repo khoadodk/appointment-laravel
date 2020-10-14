@@ -2,6 +2,13 @@
 
 ![Home Page](https://github.com/khoadodk/appointment-laravel/blob/master/homepage.PNG)
 
+# http://appointment-laravel.herokuapp.com/
+
+# Credentials to test this app
+
+-   Admin--email: admin@gmail.com, password: password
+-   Patient--email: patient@gmail.com, password: password
+
 ### To-do-list
 
 -   Need to add seeder
