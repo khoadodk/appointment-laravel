@@ -13,3 +13,10 @@
 -   Patient can view their prespription anytime.
 -   Patient can make/update their profile.
 -   Dashboard analytics.
+
+### Ideas
+
+This app can be extended by adding more features or rename the variables to fit the business model
+
+-   Adding SMS notifications to patients and doctors (AWS SNS).
+-   Allow doctors to export appointment time to calendar.
