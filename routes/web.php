@@ -19,9 +19,9 @@ Route::group(['middleware' => ['auth', 'patient']], function () {
     Route::post('/user-profile', 'ProfileController@store')->name('profile.store');
     Route::post('/profile-pic', 'ProfileController@profilePic')->name('profile.pic');
 
-    Route::post('/book/appointment', 'FrontendController@store')->name('book.appointment');
-    Route::get('/my-booking', 'FrontendController@myBookings')->name('my.booking');
-    Route::get('/my-prescription', 'FrontendController@myPrescription')->name('my.prescription');
+    Route::post('/book/appointment', 'FrontEndController@store')->name('book.appointment');
+    Route::get('/my-booking', 'FrontEndController@myBookings')->name('my.booking');
+    Route::get('/my-prescription', 'FrontEndController@myPrescription')->name('my.prescription');
 });
 // Admin Routes
 Route::group(['middleware' => ['auth', 'admin']], function () {

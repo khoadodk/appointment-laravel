@@ -2,6 +2,11 @@
 
 ![Home Page](https://github.com/khoadodk/appointment-laravel/blob/master/homepage.PNG)
 
+### To-do-list
+
+-   Need to add seeder
+-   Use image url instead of local files.s
+
 ### Functionality Overview
 
 -   Admin, doctor, patients authentication,
